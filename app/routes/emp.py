@@ -24,16 +24,11 @@ async def empok(req: Request,
      print(empid,fname,lname,email,phone,hdate,jobid,sal,
            comm,mgrid,deptid)
 
-     comm = float(comm) if comm != '0' else None
-     mgrid = int (mgrid) if mgrid != '0' else None
-     deptid = int(deptid) if deptid != '0' else None
-
      emp = Employee(empid =empid, fname =fname, lname = lname,
             email =email, phone= phone, hdate =hdate,
             jobid = jobid, sal= sal, comm =comm, mgrid= mgrid,
             deptid = deptid)
 
-
      return templetes.TemplateResponse('emp/result.html',
-           {'emp':emp , 'request': req})
+           {'emp': emp, 'request': req})
 
