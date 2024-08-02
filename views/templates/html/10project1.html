@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>프로젝트1</title>
+    <style>
+        /*heder, nav, main, footer등을
+        중앙에 배치하기 위해 컨테이너 요소 생성*/
+       #container {border: 1px solid red;
+       width: 1080px; margin: 0 auto;}
+
+        /*header*/
+        header {border: 1px solid darkred;}
+
+        /*nav*/
+        nav {border: 1px solid darkgreen}
+
+        /*main*/
+        main {border: 1px solid darkviolet}
+
+        /*footer*/
+        footer {border: 1px solid darkcyan}
+    </style>
 </head>
 <body>
+    <div id="container">
     <h1>프로젝트1</h1>
     <header>
         <h1>LOGO</h1>
-            <ul>
+            <ul >
                 <li>contact</li>
                 <li>store locator</li>
                 <li>suppot</li>
@@ -27,7 +46,7 @@
     <main>
         <section>
             <aside>
-                <ul>
+                <ul id="aside">
                     <li>All categories</li>
                     <li>Category1</li>
                     <li>Category2</li>
@@ -39,13 +58,13 @@
             </aside>
             <div id="banner">
                 <p>[PROMOTIONAL IMAGES ROTATE HERE]</p>
-                <ul><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+                <ul id="num"><li>1</li><li>2</li><li>3</li><li>4</li></ul>
             </div>
         </section>
         <section>
             <div id="products"></div>
                 <h2>Today's Specials</h2>
-            <ul>
+            <ul >
                 <li>
                     <img src="#">
                     <a href="#">Product1</a>
@@ -73,10 +92,9 @@
             </ul>
         </section>
     </main>
-
     <footer>
       <div>
-          <ul>
+          <ul >
               <li><h3>ABOUT US</h3></li>
               <li>Company</li>
               <li>News</li>
@@ -84,13 +102,13 @@
               <li>Policies</li>
               <li>Contact</li>
           </ul>
-          <ul>
+          <ul >
               <li><h3>SOCLAL</h3></li>
               <li>Facebook</li>
               <li>Twitter</li>
               <li>Try our app</li>
           </ul>
-          <ul>
+          <ul >
               <li><h3>SERVICE</h3></li>
               <li>FAQ</li>
               <li>Live support</li>
@@ -99,5 +117,6 @@
       </div>
         <div>Copyright &copy; 2024. zzyzzy.All Rights Reserved.</div>
     </footer>
+    </div>
 </body>
 </html>
