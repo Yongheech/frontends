@@ -58,6 +58,6 @@ public static void main(String[] args){
 | 지현 | 99 | 98 | 99 |
 
 ---
- $ a^2 = b^2 + c^2 $ <br>
- $$ x = {-b \pm \sqrt {b^2 - 4ac} \over 2a} $$
+ $a^2 = b^2 + c^2 $ <br>
+ $x = {-b \pm \sqrt {b^2 - 4ac} \over 2a}$
  
