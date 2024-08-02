@@ -10,7 +10,19 @@
        width: 1080px; margin: 0 auto;}
 
         /*header*/
-        header {border: 1px solid darkred;}
+        header {border: 1px solid darkred; height: 100px}
+
+        header h1 {background: #cccccc; width: 150px;
+                text-align: center; padding: 7px 0;
+                margin-left: 20px ;float: left }
+
+        header ul {list-style: none ; padding: 0; float: right; margin-right: 10px}
+        header ul li {display: inline-block; padding:0 1px;}
+        header ul li:after { content: ' |'}
+        header ul li:last-child:after { content: ''}
+
+        header div {float: left; margin-top: 60px ; margin-left:5px }
+        .clear { clear: both}
 
         /*nav*/
         nav {border: 1px solid darkgreen}
@@ -36,7 +48,7 @@
         <div ><a href="#">Log in</a> or
             <a href="#">Create Account</a></div>
     </header>
-    <nav>
+    <nav class="clear">
       <input type="text" name="search">
         <select name="findtype">
             <option>Category</option>
