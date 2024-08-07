@@ -11,30 +11,34 @@ templates = Jinja2Templates(directory='views/templates')
 async def index(req: Request):
     return templates.TemplateResponse('js/index.html', {'request': req})
 
-@jscript_router.get('/hello/')
+@jscript_router.get('/hello')
 async def hello(req: Request):
     return templates.TemplateResponse('js/01hello.html', {'request': req})
 
-@jscript_router.get('/type/')
+@jscript_router.get('/type')
 async def type(req: Request):
     return templates.TemplateResponse('js/02type.html', {'request': req})
 
-@jscript_router.get('/operator/')
+@jscript_router.get('/operator')
 async def operator(req: Request):
     return templates.TemplateResponse('js/03operator.html', {'request': req})
 
-@jscript_router.get('/condition/')
+@jscript_router.get('/condition')
 async def condition(req: Request):
     return templates.TemplateResponse('js/04condition.html', {'request': req})
 
-@jscript_router.get('/loop/')
+@jscript_router.get('/loop')
 async def loop(req: Request):
     return templates.TemplateResponse('js/05loop.html', {'request': req})
 
-@jscript_router.get('/array/')
+@jscript_router.get('/array')
 async def array(req: Request):
     return templates.TemplateResponse('js/06array.html', {'request': req})
 
-@jscript_router.get('/while2/')
+@jscript_router.get('/while2')
 async def while2(req: Request):
     return templates.TemplateResponse('js/07while2.html', {'request': req})
+
+@jscript_router.get('/function')
+async def function(req: Request):
+    return templates.TemplateResponse('js/08function.html', {'request': req})
