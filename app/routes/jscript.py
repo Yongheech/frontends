@@ -35,9 +35,9 @@ async def loop(req: Request):
 async def array(req: Request):
     return templates.TemplateResponse('js/06array.html', {'request': req})
 
-@jscript_router.get('/while2')
-async def while2(req: Request):
-    return templates.TemplateResponse('js/07while2.html', {'request': req})
+@jscript_router.get('/while')
+async def whiles(req: Request):
+    return templates.TemplateResponse('js/07while.html', {'request': req})
 
 @jscript_router.get('/function')
 async def function(req: Request):
@@ -48,9 +48,8 @@ async def collback(req: Request):
     return templates.TemplateResponse('js/09collback.html', {'request': req})
 
 @jscript_router.get('/except')
-async def except2(req: Request):
+async def excepts(req: Request):
     return templates.TemplateResponse('js/10except.html', {'request': req})
-
 
 @jscript_router.get('/bom')
 async def bom(req: Request):
@@ -71,3 +70,7 @@ async def form(req: Request):
 @jscript_router.get('/ajax')
 async def ajax(req: Request):
     return templates.TemplateResponse('js/15ajax.html', {'request': req})
+
+@jscript_router.get('/zipcode')
+async def zipcode(req: Request):
+    return templates.TemplateResponse('js/16zipcode.html', {'request': req})
