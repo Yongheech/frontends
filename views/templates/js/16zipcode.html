@@ -8,9 +8,9 @@
 
 <h2>우편번호 검색</h2>
 <div>
-    <select id = "sido" onchange=""></select>
-    <select id= "gugun" onchange=""></select>
-    <select id= "dong" onchange=""></select>
+    <select id = "sido" onchange="gatGugun()"></select>
+    <select id= "gugun" onchange="gatDong()"></select>
+    <select id= "dong" onchange="gatAddress"></select>
 </div>
 
 
@@ -52,6 +52,11 @@
     };
 
     let gatGugun = () => {
+        // 기존 시군구 항목 제거
+        while(gugun.firstChild) { // 시군구에 항목이 있으면
+            gugun.removeChild(gugun.firstChild); // 자식요소 제거
+        }
+
         // 타이틀
         let opt = document.createElement('option');
         let txt = document.createTextNode('시/군/구');
@@ -59,12 +64,14 @@
         gugun.appendChild(opt);
 
         //시군구 목록
-        for (let val of gugundata[0]) {
+        if (sido.selectedIndex > 0) {
+        for (let val of gugundata[sido.selectedIndex -1]) {
             opt = document.createElement('option');
             txt = document.createTextNode(val);
             opt.appendChild(txt);
             gugun.appendChild(opt);
         }
+      }
     };
 
     let gatDong= () => {};
