@@ -42,3 +42,20 @@ async def while2(req: Request):
 @jscript_router.get('/function')
 async def function(req: Request):
     return templates.TemplateResponse('js/08function.html', {'request': req})
+
+@jscript_router.get('/collback')
+async def collback(req: Request):
+    return templates.TemplateResponse('js/09collback.html', {'request': req})
+
+@jscript_router.get('/except')
+async def except2(req: Request):
+    return templates.TemplateResponse('js/10except.html', {'request': req})
+
+
+@jscript_router.get('/bom')
+async def bom(req: Request):
+    return templates.TemplateResponse('js/11bom.html', {'request': req})
+
+@jscript_router.get('/dom')
+async def dom(req: Request):
+    return templates.TemplateResponse('js/12dom.html', {'request': req})
